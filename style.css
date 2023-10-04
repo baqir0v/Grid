@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.all {
+    max-width: 90%;
+    height: 800px;
+    padding-top: 50px;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas:
+        "membership manager trial"
+        "membership reporting schedule"
+        "bilings levels custom";
+    gap: 20px;
+}
+
+.membership {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
+    grid-area: membership;
+    border-radius: 20px;
+    perspective: 20rem;
+}
+.box{
+    font-size: 20px;
+    height: 40px;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 70px;
+    margin-left: 10px;
+    text-align: center;
+}
+.box:hover{
+    transform: rotateY(60deg);
+    transform-origin:top left ;
+}
+.manager {
+    grid-area: manager;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+}
+
+.trial {
+    border-radius: 20px;
+
+    grid-area: trial;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.reporting {
+    grid-area: reporting;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+
+}
+
+.schedule {
+    grid-area: schedule;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+
+}
+
+.levels {
+    grid-area: levels;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+
+}
+
+.bilings {
+    grid-area: bilings;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+
+}
+
+.custom {
+    grid-area: custom;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+
+}
+@media screen and (max-width:1000px){
+    .all{
+        max-width: 80%;
+        grid-template-areas: 
+        "membership manager "
+        "membership trial"
+        "reporting schedule"
+        "bilings levels "
+        "custom custom";
+    }
+}
+@media screen and (max-width:600px){
+    .all{
+        max-width: 60%;
+        grid-template-areas: 
+        "membership" 
+        "manager "
+        "trial"
+        "reporting"
+        "schedule"
+        "bilings"
+        "levels"
+        "custom"
+        ;
+    }
+}
